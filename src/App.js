@@ -17,9 +17,9 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/' Component={Home}/>
+          <Route path='/:referralCode?' Component={Home}/>
           <Route path='/waiting' Component={Countdown}/>
-          <Route path='/home' Component={Home}/>
+          <Route path='/home/:referralCode?' Component={Home}/>
           <Route path='/about' Component={About}/>
           <Route path='/contact' Component={Contact}/>
           <Route path='/features' Component={Features}/>

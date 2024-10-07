@@ -20,17 +20,25 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import { useNavigate } from 'react-router-dom';
 import ReactGA from "react-ga4";
+import { useParams } from 'react-router-dom/dist';
 
 const Home = () => {
     ReactGA.initialize("G-125ZTWLY25");
-    ReactGA.send({ 
-     hitType: "pageview", 
-     page: window.location.pathname, 
-     title: "Home" 
-   });  
+    ReactGA.send({
+        hitType: "pageview",
+        page: window.location.pathname,
+        title: "Home"
+    });
 
     const navigate = useNavigate();
-    
+    const { referralCode } = useParams()
+
+    useEffect(() => {
+        if (referralCode) {
+            localStorage.setItem('referralCode', referralCode);
+        }
+    }, [referralCode]);
+
     const images = [
         Main,
         Main2,
@@ -46,38 +54,39 @@ const Home = () => {
     // };
 
     const handleButtonClick = () => {
-       navigate('/pricing')
+        navigate('/pricing')
     };
-    
+
+
     useEffect(() => {
         axios.get('https://ipinfo.io?token=aee064e2cc5a04')
-        .then(response => {
-            setData(response.data);
-            console.log(data?.country)
-            setLoading(false);
-        })
-        .catch(error => {
-            console.error(error);
-            setLoading(false);
-        });
+            .then(response => {
+                setData(response.data);
+                console.log(data?.country)
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error(error);
+                setLoading(false);
+            });
 
         const interval = setInterval(() => {
-        setCurrentImage((currentImage + 1) % images.length);
+            setCurrentImage((currentImage + 1) % images.length);
         }, 3000); // 3 seconds
         return () => clearInterval(interval);
     }, [currentImage]);
 
-    return(
+    return (
         <>
-            <Navbar/>
+            <Navbar />
             {popupVisible && (
                 <div className="popup w-[90%] md:w-[50%]">
                     <div className="float-right">
                         <svg className='' xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" onClick={handleButtonClick}>
                             <rect width="24" height="24" fill="none" />
                             <g fill="none" stroke="#0A2640" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10" />
-                            <path stroke-linecap="round" d="m14.5 9.5l-5 5m0-5l5 5" />
+                                <circle cx="12" cy="12" r="10" />
+                                <path stroke-linecap="round" d="m14.5 9.5l-5 5m0-5l5 5" />
                             </g>
                         </svg>
                     </div>
@@ -105,13 +114,13 @@ const Home = () => {
                 <div className='relative'>
                     <div className='mainCTA w-full absolute left-0'>
                     </div>
-                    {data?.country == 'CA' ?<div className='canCTA w-full absolute left-0'>
+                    {data?.country == 'CA' ? <div className='canCTA w-full absolute left-0'>
                     </div> : <></>}
-                    {data?.country == 'NG' ?<div className='nigCTA w-full absolute left-0'>
+                    {data?.country == 'NG' ? <div className='nigCTA w-full absolute left-0'>
                     </div> : <></>}
-                    {data?.country == 'GH' ?<div className='ghnCTA w-full absolute left-0'>
+                    {data?.country == 'GH' ? <div className='ghnCTA w-full absolute left-0'>
                     </div> : <></>}
-                    {data?.country == 'SA' ?<div className='souCTA w-full absolute left-0'>
+                    {data?.country == 'SA' ? <div className='souCTA w-full absolute left-0'>
                     </div> : <></>}
                     <div className='absolute right-0'>
                         <img className='w-[550px]' src={Design} alt="" />
@@ -123,7 +132,8 @@ const Home = () => {
                             <h1 className='text-white'>Your Launchpad to Success!</h1>
                             <p className='text-white'>We believe in the power of innovation <br /> and the potential of every startup to make a significant <br />impact.</p>
                             <div className='flex gap-4 mt-5 md:mt-10'>
-                                <button onClick={handleButtonClick} className='btn btn-dark-outline bg-lightBlue border-lightBlue text-primary'>Get Started</button>
+                                <a href={`https://app.craddule.com/signUp/${referralCode ? referralCode : ''}`}
+                                    className='btn btn-dark-outline bg-lightBlue border-lightBlue text-primary'>Get Started</a>
                                 {/* <button className='btn btn-outline-light'>Explore</button> */}
                             </div>
                         </div>
@@ -205,7 +215,7 @@ const Home = () => {
                                 <p className='text-[14px] md:text-[16px]'>We provide the vital tools and support needed to transform concepts into impactful solutions.</p>
                             </div>
                         </div>
-                        <button onClick={handleButtonClick} className='block btn btn-dark mt-5 md:mt-10' href='/'>Get Started</button>
+                        <a href={`https://app.craddule.com/signUp/${referralCode ? referralCode : ''}`} className='block btn btn-dark mt-5 md:mt-10'>Get Started</a>
                     </div>
                 </div>
             </div>
@@ -252,7 +262,7 @@ const Home = () => {
                 </div>
             </div> */}
             {/* <Subscribe/> */}
-            <Footer/>
+            <Footer />
         </>
     )
 };
