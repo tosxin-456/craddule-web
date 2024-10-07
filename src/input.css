@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*{
+    font-family: 'Manrope';
+    font-style: normal;
+    @apply font-manrope;
+}
+
+body{
+    background: #F9F9F9;
+}
+
+h1{
+    /* font-size: 58px; */
+    line-height: 87px;
+    font-weight: 600;
+    @apply text-deepBlue
+    text-[40px] md:text-[58px]
+    leading-[45px] md:leading-[66px]
+}
+
+h2{
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: 600;
+    @apply text-deepBlue
+    text-[35px] md:text-[48px]
+    leading-[40px] md:leading-[53px]
+}
+
+h3{
+    font-size: 44px;
+    line-height: 50px;
+    font-weight: 700;
+    @apply text-deepBlue
+    text-[30px] md:text-[44px]
+    leading-[35px] md:leading-[49px]
+}
+
+h4{
+    font-size: 32px;
+    line-height: 41.6px;
+    font-weight: 700;
+    @apply text-deepBlue
+    text-[20px] md:text-[32px]
+    leading-[25px] md:leading-[37px]
+}
+
+.nav-item{
+    @apply transition ease-out
+    duration-1000
+}
+.nav-item:hover{
+    @apply transition ease-in 
+    /* underline */
+    /* underline-offset-8 */
+    /* decoration-primary */
+    /* decoration-2 */
+    -translate-y-1
+    duration-700
+}
+
+.nav-item.active{
+    @apply underline
+    underline-offset-8
+    decoration-primary
+    decoration-2
+}
+
+input::placeholder{
+    @apply text-textBlack
+}
+
+.btn{
+    @apply px-6 md:px-10
+    py-2 md:py-3
+    w-fit
+    rounded-[20px] md:rounded-[24px]
+    border
+    font-semibold
+    text-[14px] md:text-[16px]
+}
+
+.btn-sm{
+    @apply px-4 md:px-10
+    py-2 md:py-3
+    w-fit
+    rounded-[20px] md:rounded-[24px]
+    border
+    font-semibold
+    text-[14px] md:text-[16px]
+}
+
+.btn:hover{
+    @apply transition ease-in 
+    /* underline */
+    /* underline-offset-8 */
+    /* decoration-primary */
+    /* decoration-2 */
+    -translate-y-1
+    duration-700
+}
+
+.btn-light{
+    @apply
+    bg-white
+    border-primary
+    text-deepBlue
+}
+
+.btn-dark{
+    @apply
+    bg-primary
+    border-primary
+    text-white
+}
+
+.btn-outline-light{
+    @apply bg-opacity-0
+    border-white
+    text-white
+}
+
+.btn-outline-dark{
+    @apply bg-opacity-0
+    border-primary
+    text-deepBlue
+}
+
+.buildCTA{
+    background: url("./assets/images/world_map_png.png");
+    background-size:cover;
+    opacity: .2;
+    @apply bg-primary
+    h-[150px] md:h-[243px]
+    /* overflow-hidden */
+}
+
+.mainCTA{
+    background: url("./assets/images/mainback.png");
+    background-size:cover;
+    height: 880px;
+    @apply h-screen md:h-screen
+}
+
+.main2CTA{
+    background: url("./assets/images/mainback.png");
+    background-size:cover;
+    height: 880px;
+    @apply h-[550px] md:h-[700px]
+}
+
+.landCTA{
+    background: url("./assets/images/pic\ 1.jpg");
+    background-size:cover;
+    @apply h-[550px] md:h-[700px]
+    bg-primary
+}
+
+.land2CTA{
+    background: url("./assets/images/pic\ 2.jpg");
+    background-size:cover;
+    @apply h-[550px] md:h-[700px]
+    bg-deepBlue
+}
+
+.overlay2{
+    opacity: 90%;
+    @apply h-[550px] md:h-[700px]
+    bg-deepBlue
+}
+
+.overlay{
+    opacity: 90%;
+    @apply h-[550px] md:h-[700px]
+    bg-primary
+}
+
+.nigCTA{
+    background: url("./assets/images/Nigerian\ map.png");
+    background-size:cover;
+    height: 880px;
+    @apply h-[550px] md:h-[880px]
+}
+
+.canCTA{
+    background: url("./assets/images/Canada\ map.png");
+    background-size:cover;
+    height: 880px;
+    @apply h-[550px] md:h-[880px]
+}
+
+.ghnCTA{
+    background: url("./assets/images/Ghana\ map.png");
+    background-size:cover;
+    height: 880px;
+    @apply h-[550px] md:h-[880px]
+}
+
+.souCTA{
+    background: url("./assets/images/South\ africa\ map.png");
+    background-size:cover;
+    height: 880px;
+    @apply h-[550px] md:h-[880px]
+}
+
+.contact-img
+    {
+        /* background: url("./assets/images/contact.png");
+        background-size:auto; */
+        /* background-blend-mode:multiply; */
+        /* height: 243px; */
+    }
+
+.card{
+    background-color: #FFFFFF;
+    border: 2px solid #EBEAED;
+    @apply 
+    py-10 px-3 md:p-10
+}
+
+.card-dark{
+    padding: 40px;
+    @apply bg-primary
+}
+
+.countdown-item{
+    @apply text-primary
+    text-[50px] md:text-[200px]
+    font-bold
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 5000;
+  }

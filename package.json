@@ -1,0 +1,60 @@
+{
+  "name": "craddule",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@maxmind/geoip2-node": "^5.0.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.2",
+    "geoip-lite": "^1.4.1",
+    "path-browserify": "^1.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-ga4": "^2.1.0",
+    "react-paystack": "^6.0.0",
+    "react-router-dom": "^6.24.1",
+    "react-scripts": "5.0.1",
+    "react-spinners": "^0.14.1",
+    "react-toastify": "^10.0.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
+    "@iconify/tailwind": "^1.1.1",
+    "autoprefixer": "^10.4.20",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^7.1.2",
+    "postcss-loader": "^8.1.1",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^3.4.10",
+    "webpack-cli": "^5.1.4"
+  }
+}
