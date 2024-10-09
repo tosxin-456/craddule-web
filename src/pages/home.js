@@ -220,7 +220,15 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* <div className='px-[30px] md:px-[107px] py-[15px] my-10 md:my-24 bg-none'>
+            
+            <Footer />
+        </>
+    )
+};
+
+export default Home;
+
+{/* <div className='px-[30px] md:px-[107px] py-[15px] my-10 md:my-24 bg-none'>
                 <div className='grid grid-cols-12 md:gap-20 items-start'>
                     <div className='col-span-12'>
                         <div className='mt-8 md:mt-16'>
@@ -261,10 +269,4 @@ const Home = () => {
                     </div>
                 </div>
             </div> */}
-            {/* <Subscribe/> */}
-            <Footer />
-        </>
-    )
-};
-
-export default Home;
+{/* <Subscribe/> */ }
