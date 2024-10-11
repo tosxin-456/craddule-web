@@ -77,7 +77,7 @@ const Countdown = () => {
             <div className=''>
                 <div className="px-[30px] md:px-[129px]">
                     <div className='mt-10'>
-                        <a href={referralCode ? `/home/${referralCode}` : '/home'}
+                        <a href={referralCode ? `/${referralCode}` : '/'}
  className='text-[40px] md:text-[44px] block text-center font-manrope font-semibold text-primary'>
                             Craddule
                         </a>

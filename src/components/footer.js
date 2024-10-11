@@ -21,7 +21,7 @@ const Footer = () => {
             <div className='md:flex justify-between text-white text-[20px]'>
                 <div className='w-full md:w-[370px]'>
                     <div className='w-fit mb-5'>
-                        <a href={referralCode ? `/home/${referralCode}` : '/home'}
+                        <a href={referralCode ? `/${referralCode}` : '/'}
  className={'text-[30px] md:text-[44px] font-manrope font-semibold text-primary flex items-center gap-2'}>
                             <img src={Logo1} className={'w-[50px] md:w-[70px]'} />
                             <p className={'block font-black'}>Craddule</p>
@@ -40,7 +40,7 @@ const Footer = () => {
                     <div className='mb-2 md:mb-10'>
                         <p className='text-[14px] md:text-[16px] font-semibold mb-2 md:mb-5 text-deepBlue'>Company</p>
                         <ul className='text-textBlack'>
-                            <a href={referralCode ? `/home/${referralCode}` : '/home'}
+                            <a href={referralCode ? `/${referralCode}` : '/'}
 ><li className='mb-3 text-[13px] md:text-[16px]'>Home</li></a>
                             <a href={referralCode ? `/pricing/${referralCode}` : '/pricing'}><li className='mb-3 text-[13px] md:text-[16px]'>Pricing</li></a>
                         </ul>

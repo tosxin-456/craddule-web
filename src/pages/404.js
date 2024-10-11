@@ -48,13 +48,13 @@ const N404 = () => {
         <>
             <div className={'flex justify-between items-center px-[30px] md:px-[139px] py-[15px] md:py-[15px] md:pt-[35px] bg-none z-[999] relative top-0'}>
                 <div className='w-fit'>
-                    <a href={referralCode ? `/home/${referralCode}` : '/home'}
+                    <a href={referralCode ? `/${referralCode}` : '/'}
  className={'text-[30px] md:text-[44px] font-manrope font-semibold text-white'}>
                         <img src={ Logo2White} className={'w-[100px] md:w-[150px]'} />
                     </a>
                 </div>
                 <div className='hidden md:flex gap-2'>
-                    <a href={referralCode ? `/home/${referralCode}` : '/home'}
+                    <a href={referralCode ? `/${referralCode}` : '/'}
  className='nav-item btn btn-light'>
                         Join
                     </a>

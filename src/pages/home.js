@@ -105,8 +105,8 @@ const Home = () => {
                         <p className='text-center text-[15px] md:text-[18px] text-textBlack font-medium'>We are coming live very soon.</p>
                         <p className='text-center text-[15px] md:text-[18px] text-textBlack font-medium'>In the interim, Join our waitlist and we will connect.</p>
                         <div className='flex justify-center mt-3 mb-4'>
-                             <a href={referralCode ? `/home/${referralCode}` : '/home'}
- className='block mt-2 bg-deepBlue btn-sm btn-dark text-textBlue'>Join now</a>
+                            <a href={referralCode ? `/${referralCode}` : '/'}
+                                className='block mt-2 bg-deepBlue btn-sm btn-dark text-textBlue'>Join now</a>
                         </div>
                     </div>
                 </div>
@@ -261,9 +261,9 @@ const Home = () => {
                                 </div>
                             </div>
                         </div> */}
-            {/* <Subscribe/> */ }
+            {/* <Subscribe/> */}
 
-            
+
             <Footer />
         </>
     )
