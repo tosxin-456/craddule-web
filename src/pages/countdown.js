@@ -16,13 +16,22 @@ import Design from '../assets/images/design2.png'
 import '../input.css'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate, useParams } from 'react-router-dom';
+
 
 const Countdown = () => {
     const [days, setDays] = useState(0);
     const [hours, setHours] = useState(0);
     const [minutes, setMinutes] = useState(0);
     const [seconds, setSeconds] = useState(0);
+    const navigate = useNavigate();
+    const { referralCode } = useParams()
 
+    useEffect(() => {
+        if (referralCode) {
+            localStorage.setItem('referralCode', referralCode);
+        }
+    }, [referralCode]);
    
     useEffect(() => {
         const countdownDate = new Date('2024-08-31T00:00:00');
@@ -68,7 +77,8 @@ const Countdown = () => {
             <div className=''>
                 <div className="px-[30px] md:px-[129px]">
                     <div className='mt-10'>
-                        <a href="/" className='text-[40px] md:text-[44px] block text-center font-manrope font-semibold text-primary'>
+                        <a href={referralCode ? `/home/${referralCode}` : '/home'}
+ className='text-[40px] md:text-[44px] block text-center font-manrope font-semibold text-primary'>
                             Craddule
                         </a>
                         <div className='mt-20'>

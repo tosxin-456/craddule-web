@@ -6,10 +6,11 @@ import Excellence from '../assets/images/excellence.png'
 import Hands from '../assets/images/who.png'
 import Vision from '../assets/images/vision 5.png'
 import '../input.css'
-import { useState } from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import ReactGA from "react-ga4";
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 const About = () => {
      
   ReactGA.initialize("G-125ZTWLY25");
@@ -18,6 +19,16 @@ const About = () => {
    page: window.location.pathname, 
    title: "About Us" 
  });
+    const navigate = useNavigate();
+    const [referralCode, setReferralCode] = useState('');
+
+    useEffect(() => {
+        // Fetch referralCode from localStorage
+        const storedReferralCode = localStorage.getItem('referralCode');
+        if (storedReferralCode) {
+            setReferralCode(storedReferralCode);
+        }
+    }, []);
     return(
         <>
             <Navbar/>

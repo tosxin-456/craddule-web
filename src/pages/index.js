@@ -10,7 +10,7 @@ import Navbar from '../components/navbar';
 import { ClipLoader } from 'react-spinners';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { useNavigate, useParams } from 'react-router-dom';
 const Index = () => {
 
     const [data, setData] = useState();
@@ -59,6 +59,15 @@ const Index = () => {
         });
 
     }
+
+    const navigate = useNavigate();
+    const { referralCode } = useParams()
+
+    useEffect(() => {
+        if (referralCode) {
+            localStorage.setItem('referralCode', referralCode);
+        }
+    }, [referralCode]);
 
     useEffect(() => {
         axios.get('https://ipinfo.io?token=aee064e2cc5a04')
