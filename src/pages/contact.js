@@ -1,6 +1,7 @@
 import '../input.css'
 import ContactImg from '../assets/images/contact.png'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import ReactGA from "react-ga4";
@@ -11,6 +12,15 @@ const Contact = () => {
      page: window.location.pathname, 
      title: "Contact Us" 
    });  
+
+    const navigate = useNavigate();
+    const { referralCode } = useParams()
+
+    useEffect(() => {
+        if (referralCode) {
+            localStorage.setItem('referralCode', referralCode);
+        }
+    }, [referralCode]);
     return(
         <>
         <Navbar/>

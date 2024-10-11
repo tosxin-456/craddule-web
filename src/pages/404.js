@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Nav from '../components/nav';
 import Logo2White from '../assets/images/Craddule logo 2 white.png';
-
+import { useNavigate, useParams } from 'react-router-dom';
 const N404 = () => {
 
     const [data, setData] = useState();
@@ -16,6 +16,16 @@ const N404 = () => {
         Main2,
         Main3
     ];
+
+    const [referralCode, setReferralCode] = useState('');
+
+    useEffect(() => {
+        // Fetch referralCode from localStorage
+        const storedReferralCode = localStorage.getItem('referralCode');
+        if (storedReferralCode) {
+            setReferralCode(storedReferralCode);
+        }
+    }, []);
     
     const [show, setShow] = useState(false);
 
@@ -38,12 +48,14 @@ const N404 = () => {
         <>
             <div className={'flex justify-between items-center px-[30px] md:px-[139px] py-[15px] md:py-[15px] md:pt-[35px] bg-none z-[999] relative top-0'}>
                 <div className='w-fit'>
-                    <a href="/" className={'text-[30px] md:text-[44px] font-manrope font-semibold text-white'}>
+                    <a href={referralCode ? `/home/${referralCode}` : '/home'}
+ className={'text-[30px] md:text-[44px] font-manrope font-semibold text-white'}>
                         <img src={ Logo2White} className={'w-[100px] md:w-[150px]'} />
                     </a>
                 </div>
                 <div className='hidden md:flex gap-2'>
-                    <a href="/" className='nav-item btn btn-light'>
+                    <a href={referralCode ? `/home/${referralCode}` : '/home'}
+ className='nav-item btn btn-light'>
                         Join
                     </a>
                 </div>

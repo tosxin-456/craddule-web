@@ -6,7 +6,7 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import { PaystackButton } from 'react-paystack';
 import ReactGA from "react-ga4";
-
+import { useNavigate, useParams } from 'react-router-dom';
 
 
 const Pricing = () => {
@@ -16,6 +16,15 @@ const Pricing = () => {
      page: window.location.pathname, 
      title: "Contact Us" 
    });  
+
+    const navigate = useNavigate();
+    const { referralCode } = useParams()
+
+    useEffect(() => {
+        if (referralCode) {
+            localStorage.setItem('referralCode', referralCode);
+        }
+    }, [referralCode]);
 
     const [data, setData] = useState();
     const [loading, setLoading] = useState();

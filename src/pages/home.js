@@ -18,9 +18,9 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import ReactGA from "react-ga4";
-import { useParams } from 'react-router-dom/dist';
+
 
 const Home = () => {
     ReactGA.initialize("G-125ZTWLY25");
@@ -105,7 +105,8 @@ const Home = () => {
                         <p className='text-center text-[15px] md:text-[18px] text-textBlack font-medium'>We are coming live very soon.</p>
                         <p className='text-center text-[15px] md:text-[18px] text-textBlack font-medium'>In the interim, Join our waitlist and we will connect.</p>
                         <div className='flex justify-center mt-3 mb-4'>
-                            <a href='/' className='block mt-2 bg-deepBlue btn-sm btn-dark text-textBlue'>Join now</a>
+                             <a href={referralCode ? `/home/${referralCode}` : '/home'}
+ className='block mt-2 bg-deepBlue btn-sm btn-dark text-textBlue'>Join now</a>
                         </div>
                     </div>
                 </div>
@@ -219,6 +220,48 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            {/* <div className='px-[30px] md:px-[107px] py-[15px] my-10 md:my-24 bg-none'>
+                            <div className='grid grid-cols-12 md:gap-20 items-start'>
+                                <div className='col-span-12'>
+                                    <div className='mt-8 md:mt-16'>
+                                        <h2 >Explore Our Tools</h2>
+                                        <div className='grid grid-cols-12 md:gap-5 mt-5 md:mt-10'>
+                                            <div className='col-span-12 md:col-span-6 mb-2 md:mb-5'>
+                                            <a href='/features'><div className='bg-white drop-shadow-sm px-[20px] md:px-[30px] py-[10px] md:py-[23px] flex gap-2 md:gap-5 items-center'>
+                                                    <img className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' src={Dots} alt="" />
+                                                    <p className='font-bold text-[16px] md:text-[20px] text-darkBlue'>Accelera8</p>
+                                                </div></a>
+                                            </div>
+                                            <div className='col-span-12 md:col-span-6 mb-2 md:mb-5'>
+                                            <a href='/features'><div className='bg-white drop-shadow-sm px-[20px] md:px-[30px] py-[10px] md:py-[23px] flex gap-2 md:gap-5 items-center'>
+                                                    <img className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' src={Dots} alt="" />
+                                                    <p className='font-bold text-[16px] md:text-[20px] text-darkBlue'>Graphs</p>
+                                                </div></a>
+                                            </div>
+                                            <div className='col-span-12 md:col-span-6 mb-2 md:mb-5'>
+                                            <a href='/features'><div className='bg-white drop-shadow-sm px-[20px] md:px-[30px] py-[10px] md:py-[23px] flex gap-2 md:gap-5 items-center'>
+                                                    <img className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' src={Dots} alt="" />
+                                                    <p className='font-bold text-[16px] md:text-[20px] text-darkBlue'>Craddule Hub</p>
+                                                </div></a>
+                                            </div>
+                                            <div className='col-span-12 md:col-span-6'>
+                                            <a href='/features'><div className='bg-white drop-shadow-sm px-[20px] md:px-[30px] py-[10px] md:py-[23px] flex gap-2 md:gap-5 items-center'>
+                                                    <img className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' src={Dots} alt="" />
+                                                    <p className='font-bold text-[16px] md:text-[20px] text-darkBlue'>KPI</p>
+                                                </div></a>
+                                            </div>
+                                        </div>
+                                        <a href='/features' className='btn btn-dark block mt-5 md:mt-10'>Learn More</a>
+                                    </div>
+                                </div>
+                                <div className='col-span-12'>
+                                    <div className=''>
+                                        <img className='m-auto hidden md:w-[582.6px] md:h-[560px]' src={Explore} alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div> */}
+            {/* <Subscribe/> */ }
 
             
             <Footer />
@@ -227,46 +270,3 @@ const Home = () => {
 };
 
 export default Home;
-
-{/* <div className='px-[30px] md:px-[107px] py-[15px] my-10 md:my-24 bg-none'>
-                <div className='grid grid-cols-12 md:gap-20 items-start'>
-                    <div className='col-span-12'>
-                        <div className='mt-8 md:mt-16'>
-                            <h2 >Explore Our Tools</h2>
-                            <div className='grid grid-cols-12 md:gap-5 mt-5 md:mt-10'>
-                                <div className='col-span-12 md:col-span-6 mb-2 md:mb-5'>
-                                <a href='/features'><div className='bg-white drop-shadow-sm px-[20px] md:px-[30px] py-[10px] md:py-[23px] flex gap-2 md:gap-5 items-center'>
-                                        <img className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' src={Dots} alt="" />
-                                        <p className='font-bold text-[16px] md:text-[20px] text-darkBlue'>Accelera8</p>
-                                    </div></a>
-                                </div>
-                                <div className='col-span-12 md:col-span-6 mb-2 md:mb-5'>
-                                <a href='/features'><div className='bg-white drop-shadow-sm px-[20px] md:px-[30px] py-[10px] md:py-[23px] flex gap-2 md:gap-5 items-center'>
-                                        <img className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' src={Dots} alt="" />
-                                        <p className='font-bold text-[16px] md:text-[20px] text-darkBlue'>Graphs</p>
-                                    </div></a>
-                                </div>
-                                <div className='col-span-12 md:col-span-6 mb-2 md:mb-5'>
-                                <a href='/features'><div className='bg-white drop-shadow-sm px-[20px] md:px-[30px] py-[10px] md:py-[23px] flex gap-2 md:gap-5 items-center'>
-                                        <img className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' src={Dots} alt="" />
-                                        <p className='font-bold text-[16px] md:text-[20px] text-darkBlue'>Craddule Hub</p>
-                                    </div></a>
-                                </div>
-                                <div className='col-span-12 md:col-span-6'>
-                                <a href='/features'><div className='bg-white drop-shadow-sm px-[20px] md:px-[30px] py-[10px] md:py-[23px] flex gap-2 md:gap-5 items-center'>
-                                        <img className='w-[20px] h-[20px] md:w-[30px] md:h-[30px]' src={Dots} alt="" />
-                                        <p className='font-bold text-[16px] md:text-[20px] text-darkBlue'>KPI</p>
-                                    </div></a>
-                                </div>
-                            </div>
-                            <a href='/features' className='btn btn-dark block mt-5 md:mt-10'>Learn More</a>
-                        </div>
-                    </div>
-                    <div className='col-span-12'>
-                        <div className=''>
-                            <img className='m-auto hidden md:w-[582.6px] md:h-[560px]' src={Explore} alt="" />
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-{/* <Subscribe/> */ }

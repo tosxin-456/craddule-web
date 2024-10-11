@@ -7,10 +7,11 @@ import Chat from '../assets/images/chat.png'
 import KPI from '../assets/images/kpi.png'
 import Graphs from '../assets/images/graphs.png'
 import '../input.css'
-import { useState } from 'react';
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
 import ReactGA from "react-ga4";
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const Features = () => {
     ReactGA.initialize("G-125ZTWLY25");
@@ -20,6 +21,14 @@ const Features = () => {
      title: "Features" 
    });  
 
+    const navigate = useNavigate();
+    const { referralCode } = useParams()
+
+    useEffect(() => {
+        if (referralCode) {
+            localStorage.setItem('referralCode', referralCode);
+        }
+    }, [referralCode]);
     return(
         <>
             <Navbar/>
