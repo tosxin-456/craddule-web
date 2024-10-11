@@ -43,10 +43,10 @@ const Nav = () => {
 
       <div className={height < 70 ? 'flex justify-between items-center px-[30px] md:px-[139px] py-[15px] md:py-[15px] md:pt-[35px] bg-none z-[999] relative top-0' : 'flex justify-between items-center px-[30px] md:px-[139px] py-[15px] md:py-[15px] bg-white z-[1000] sticky top-0'}>
         <div className='w-fit'>
-          <a href={referralCode ? `/home/${referralCode}` : '/home'}
-            className={(basePath === 'home'|| location.pathname == '/' || location.pathname == '/home' || location.pathname == '/waiting' || location.pathname == '/waiting') && height < 70 ? 'text-[30px] md:text-[44px] font-manrope font-semibold text-white' : 'text-[30px] md:text-[44px] font-manrope font-semibold text-primary flex gap-2 items-center'}>
-            <img src={(basePath === 'home' || location.pathname == '/' || location.pathname == '/home' || location.pathname == '/waiting') && height < 70 ? Logo2White : Logo1} className={(basePath === 'home' || location.pathname == '/' || location.pathname == '/home' || location.pathname == '/waiting') && height < 70 ? 'w-[100px] md:w-[150px]' : 'w-[50px] md:w-[70px]'} />
-            <p className={(basePath === 'home' || location.pathname == '/' || location.pathname == '/home' || location.pathname == '/waiting') && height < 70 ? 'hidden' : 'block font-black'}>Craddule</p>
+          <a href={referralCode ? `/${referralCode}` : '/'}
+            className={(basePath === 'home'|| location.pathname == '/' || location.pathname == '/' || location.pathname == '/waiting' || location.pathname == '/waiting') && height < 70 ? 'text-[30px] md:text-[44px] font-manrope font-semibold text-white' : 'text-[30px] md:text-[44px] font-manrope font-semibold text-primary flex gap-2 items-center'}>
+            <img src={(basePath === 'home' || location.pathname == '/' || location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? Logo2White : Logo1} className={(basePath === 'home' || location.pathname == '/' || location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? 'w-[100px] md:w-[150px]' : 'w-[50px] md:w-[70px]'} />
+            <p className={(basePath === 'home' || location.pathname == '/' || location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? 'hidden' : 'block font-black'}>Craddule</p>
           </a>
         </div>
         <div className='hidden md:flex gap-2'>
@@ -72,7 +72,7 @@ const Nav = () => {
       >
         <div className='flex justify-between items-center w-full gap-5'>
           <div className='w-fit'>
-            <a href={referralCode ? `/home/${referralCode}` : '/home'}
+            <a href={referralCode ? `/${referralCode}` : '/'}
               className={'text-[30px] md:text-[44px] font-manrope font-semibold text-primary flex items-center gap-2'}>
               <img src={Logo1} className={'w-[50px] md:w-[70px]'} />
               <p className={'block font-black'}>Craddule</p>
@@ -94,7 +94,7 @@ const Nav = () => {
             {/* <a href="/waiting" className='nav-item block btn btn-dark-outline'>
                   <li>Countdown</li>
                 </a> */}
-            <a href={referralCode ? `/home/${referralCode}` : '/home'}
+            <a href={referralCode ? `/${referralCode}` : '/'}
               className='nav-item block btn btn-dark mt-5'>
               <li>Join</li>
             </a>

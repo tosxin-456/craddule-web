@@ -166,74 +166,7 @@ const Pricing = () => {
             <h3 className='text-center md:w-1/2 m-auto'>Simple & flexible plans built for everyone</h3>
             <div className='grid grid-cols-12 md:gap-8 my-10 md:my-20 md:mx-[70px]'>
 
-                <div className='col-span-12 mb-5 md:mb-0 md:col-span-6'>
-                    <div className='grid grid-cols-6'>
-                        <div className='col-span-6'>
-                            <div className='card rounded-md' style={{paddingBottom:'5.6rem'}}>
-                                <p className='font-bold text-[16px] text-primary text-center'>CRADDULE REVIEW</p>
-                                <div className='flex gap-2 md:gap-5 items-center justify-center'>
-                                    {/* <h2 className=''>{data?.country == 'NG' ? <>₦0</>:<>$0</>}</h2>
-                                    <div>
-                                        <p className='text-[12px] md:text-[16px]'>per user</p>
-                                        <p className='-mt-1 text-[12px] md:text-[16px]'>per month</p>
-                                    </div> */}
-                                    <h4>Coming soon!</h4>
-                                </div>
-                                <div className='flex justify-center'>
-                                    <div className='mt-8 w-fit'>
-                                        <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
-                                            <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
-                                            <p className='text-textBlack block text-[14px]'>Personalized set up</p>
-                                        </div>
-                                        <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
-                                            <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
-                                            <p className='text-textBlack block text-[14px]'>Filter Phases</p>
-                                        </div>
-                                        <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
-                                            <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
-                                            <p className='text-textBlack block text-[14px]'>Product Questionnaire</p>
-                                        </div>
-                                        <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
-                                            <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
-                                            <p className='text-textBlack block text-[14px]'>Fast track product launch</p>
-                                        </div>
-                                        <div className='flex gap-4 items-center'>
-                                            <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
-                                            <p className='text-textBlack block text-[14px]'>KPI</p>
-                                        </div>
-                                        <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
-                                            <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
-                                            <p className='text-textBlack block text-[14px]'>Craddule Hub</p>
-                                        </div>
-                                        <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
-                                            <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
-                                            <p className='text-textBlack block text-[14px]'>Scrap Book</p>
-                                        </div>
-                                        <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
-                                            <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
-                                            <p className='text-textBlack block text-[14px]'>Graphs</p>
-                                        </div>
-                                        <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
-                                            <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
-                                            <p className='text-textBlack block text-[14px]'>Timeline Builder</p>
-                                        </div>
-                                        <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
-                                            <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
-                                            <p className='text-textBlack block text-[14px]'>Industry Feedback</p>
-                                        </div>
-                                        <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
-                                            <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
-                                            <p className='text-textBlack block text-[14px]'>Premium Contents</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='flex justify-center mt-5'>
-                                    <button className='btn btn-dark' disabled>Coming soon</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        
 
                 <div className='col-span-12 mb-5 md:mb-0 md:col-span-6'>
                     <div className='grid grid-cols-6'>
@@ -303,7 +236,7 @@ const Pricing = () => {
                                     </div>
                                 </div>
                                 <div className='flex justify-center mt-5'>
-                                <button className='btn btn-light' onClick={() => window.location.href = 'https://app.craddule.com/signUp'}>Start Trial</button>
+                                        <button className='btn btn-light' onClick={() => window.location.href= `https://app.craddule.com/signUp/${referralCode ? referralCode : ''}`}>Start Trial</button>
                                    
                                 </div>
                             </div>
@@ -383,6 +316,75 @@ const Pricing = () => {
                         
                     </div>
                 </div>
+
+                    <div className='col-span-12 mb-5 md:mb-0 md:col-span-6'>
+                        <div className='grid grid-cols-6'>
+                            <div className='col-span-6'>
+                                <div className='card rounded-md' style={{ paddingBottom: '5.6rem' }}>
+                                    <p className='font-bold text-[16px] text-primary text-center'>CRADDULE REVIEW</p>
+                                    <div className='flex gap-2 md:gap-5 items-center justify-center'>
+                                        {/* <h2 className=''>{data?.country == 'NG' ? <>₦0</>:<>$0</>}</h2>
+                                    <div>
+                                        <p className='text-[12px] md:text-[16px]'>per user</p>
+                                        <p className='-mt-1 text-[12px] md:text-[16px]'>per month</p>
+                                    </div> */}
+                                        <h4>Coming soon!</h4>
+                                    </div>
+                                    <div className='flex justify-center'>
+                                        <div className='mt-8 w-fit'>
+                                            <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
+                                                <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
+                                                <p className='text-textBlack block text-[14px]'>Personalized set up</p>
+                                            </div>
+                                            <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
+                                                <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
+                                                <p className='text-textBlack block text-[14px]'>Filter Phases</p>
+                                            </div>
+                                            <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
+                                                <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
+                                                <p className='text-textBlack block text-[14px]'>Product Questionnaire</p>
+                                            </div>
+                                            <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
+                                                <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
+                                                <p className='text-textBlack block text-[14px]'>Fast track product launch</p>
+                                            </div>
+                                            <div className='flex gap-4 items-center'>
+                                                <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
+                                                <p className='text-textBlack block text-[14px]'>KPI</p>
+                                            </div>
+                                            <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
+                                                <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
+                                                <p className='text-textBlack block text-[14px]'>Craddule Hub</p>
+                                            </div>
+                                            <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
+                                                <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
+                                                <p className='text-textBlack block text-[14px]'>Scrap Book</p>
+                                            </div>
+                                            <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
+                                                <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
+                                                <p className='text-textBlack block text-[14px]'>Graphs</p>
+                                            </div>
+                                            <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
+                                                <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
+                                                <p className='text-textBlack block text-[14px]'>Timeline Builder</p>
+                                            </div>
+                                            <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
+                                                <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
+                                                <p className='text-textBlack block text-[14px]'>Industry Feedback</p>
+                                            </div>
+                                            <div className='flex gap-4 items-center mt-[2px] md:mt-[10px]'>
+                                                <img className='w-[12px] h-[10.32px]' src={Check_icon} alt="" srcset="" />
+                                                <p className='text-textBlack block text-[14px]'>Premium Contents</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className='flex justify-center mt-5'>
+                                        <button className='btn btn-dark' disabled>Coming soon</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
         <Footer/>

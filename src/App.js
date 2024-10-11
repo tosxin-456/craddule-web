@@ -17,14 +17,13 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/:referralCode?' Component={Home}/>
-          <Route path='/waiting/:referralCode?' Component={Countdown}/>
-          <Route path='/home/:referralCode?' Component={Home}/>
-          <Route path='/about/:referralCode?' Component={About}/>
-          <Route path='/contact/:referralCode?' Component={Contact}/>
-          <Route path='/features/:referralCode?' Component={Features}/>
-          <Route path='/pricing/:referralCode?' Component={Pricing}/>
-          <Route path='/404/:referralCode?' Component={N404}/>
+          <Route path='/:referralCode?' Component={Home} />
+          <Route path='/waiting/:referralCode?' Component={Countdown} />
+          <Route path='/about/:referralCode?' Component={About} />
+          <Route path='/contact/:referralCode?' Component={Contact} />
+          <Route path='/features/:referralCode?' Component={Features} />
+          <Route path='/pricing/:referralCode?' Component={Pricing} />
+          <Route path='/404/:referralCode?' Component={N404} />
         </Routes>
       </BrowserRouter>
     </div>
