@@ -11,6 +11,8 @@ const Nav = () => {
   const [height, setHeight] = useState(0);
   const [show, setShow] = useState(false);
   const [referralCode, setReferralCode] = useState('');
+
+  const hasLettersAndNumbers = /^(?=.*[a-zA-Z])(?=.*[0-9]).+$/.test(basePath);
   useEffect(() => {
     // Fetch referralCode from localStorage
     const storedReferralCode = localStorage.getItem('referralCode');
@@ -44,9 +46,9 @@ const Nav = () => {
       <div className={height < 70 ? 'flex justify-between items-center px-[30px] md:px-[139px] py-[15px] md:py-[15px] md:pt-[35px] bg-none z-[999] relative top-0' : 'flex justify-between items-center px-[30px] md:px-[139px] py-[15px] md:py-[15px] bg-white z-[1000] sticky top-0'}>
         <div className='w-fit'>
           <a href={referralCode ? `/home/${referralCode}` : '/home'}
-            className={(basePath === 'home'|| location.pathname == '/' || location.pathname == '/home' || location.pathname == '/waiting' || location.pathname == '/waiting') && height < 70 ? 'text-[30px] md:text-[44px] font-manrope font-semibold text-white' : 'text-[30px] md:text-[44px] font-manrope font-semibold text-primary flex gap-2 items-center'}>
-            <img src={(basePath === 'home' || location.pathname == '/' || location.pathname == '/home' || location.pathname == '/waiting') && height < 70 ? Logo2White : Logo1} className={(basePath === 'home' || location.pathname == '/' || location.pathname == '/home' || location.pathname == '/waiting') && height < 70 ? 'w-[100px] md:w-[150px]' : 'w-[50px] md:w-[70px]'} />
-            <p className={(basePath === 'home' || location.pathname == '/' || location.pathname == '/home' || location.pathname == '/waiting') && height < 70 ? 'hidden' : 'block font-black'}>Craddule</p>
+            className={(hasLettersAndNumbers || basePath === 'home'|| location.pathname == '/' || location.pathname == '/home' || location.pathname == '/waiting' || location.pathname == '/waiting') && height < 70 ? 'text-[30px] md:text-[44px] font-manrope font-semibold text-white' : 'text-[30px] md:text-[44px] font-manrope font-semibold text-primary flex gap-2 items-center'}>
+            <img src={(hasLettersAndNumbers || basePath === 'home' || location.pathname == '/' || location.pathname == '/home' || location.pathname == '/waiting') && height < 70 ? Logo2White : Logo1} className={(basePath === 'home' || location.pathname == '/' || location.pathname == '/home' || location.pathname == '/waiting') && height < 70 ? 'w-[100px] md:w-[150px]' : 'w-[50px] md:w-[70px]'} />
+            <p className={(hasLettersAndNumbers || basePath === 'home' || location.pathname == '/' || location.pathname == '/home' || location.pathname == '/waiting') && height < 70 ? 'hidden' : 'block font-black'}>Craddule</p>
           </a>
         </div>
         <div className='hidden md:flex gap-2'>
