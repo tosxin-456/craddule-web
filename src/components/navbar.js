@@ -148,7 +148,7 @@ const Navbar = () => {
               Contact us
             </li>
           </a>
-          <a href={referralCode ? `https://app.craddule.com/login?referralCode=${referralCode}` : 'https://app.craddule.com/login'}>
+          <a href={referralCode ? `https://app.craddule.com/login` : 'https://app.craddule.com/login'}>
             <li className="text-primary font-medium text-[16px] mb-[20px]">
               Login
             </li>
