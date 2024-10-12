@@ -11,7 +11,7 @@ const Navbar = () => {
   const [height, setHeight] = useState(0);
   const [show, setShow] = useState(false);
   const basePath = location.pathname.split('/')[1] || '/'; // This gets the 'home' part
-
+  const hasLettersAndNumbers = /^(?=.*[a-zA-Z])(?=.*[0-9]).+$/.test(basePath);
 
   const [referralCode, setReferralCode] = useState('');
 
@@ -47,13 +47,13 @@ const Navbar = () => {
       <div className={(basePath==='home' ||  location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? 'flex justify-between items-center px-[30px] md:px-[139px] py-[5px] pt-[20px] md:py-[0px] md:pt-[35px] bg-none z-[999] relative top-0' : 'flex justify-between items-center px-[30px] md:px-[139px] py-[15px] md:py-[15px] bg-[#F9F9F9] z-[1000] sticky top-0'}>
         <div className='w-fit'>
           <a href={referralCode ? `/${referralCode}` : '/'}
-            className={(basePath === 'home' ||  location.pathname == '/' || location.pathname == '/waiting' || location.pathname == '/waiting') && height < 70 ? 'text-[30px] md:text-[44px] font-manrope font-semibold text-white' : 'text-[30px] md:text-[44px] font-manrope font-semibold text-primary flex gap-2'}>
-            <img src={(basePath === 'home' || location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? Logo2White : Logo1} className={(basePath === 'home' ||   location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? 'w-[100px] md:w-[150px]' : 'w-[50px] md:w-[70px]'} />
-            <p className={(basePath === 'home' ||   location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? 'hidden' : 'block font-black'}>Craddule</p>
+            className={(basePath === '' || basePath === '/' ||  location.pathname == '/' || location.pathname == '/waiting' || location.pathname == '/waiting') && height < 70 ? 'text-[30px] md:text-[44px] font-manrope font-semibold text-white' : 'text-[30px] md:text-[44px] font-manrope font-semibold text-primary flex gap-2'}>
+            <img src={(basePath === '' || basePath === '/' || location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? Logo2White : Logo1} className={(basePath === '' || basePath === '/' ||   location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? 'w-[100px] md:w-[150px]' : 'w-[50px] md:w-[70px]'} />
+            <p className={(basePath === '' || basePath === '/' ||   location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? 'hidden' : 'block font-black'}>Craddule</p>
           </a>
         </div>
         <div className='text-[16px] font-semibold w-auto'>
-          <ul className={(basePath === 'home' ||  location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? 'hidden md:flex justify-between items-center text-white gap-7' : 'hidden md:flex sm:hidden justify-between items-center text-deepBlue gap-7'}>
+          <ul className={(basePath === '' || basePath === '/' ||  location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? 'hidden md:flex justify-between items-center text-white gap-7' : 'hidden md:flex sm:hidden justify-between items-center text-deepBlue gap-7'}>
             <a href={referralCode ? `/${referralCode}` : '/'}>
               <li className='nav-item'>
                 Home
@@ -94,7 +94,7 @@ const Navbar = () => {
         </div>
         <svg className={show ? 'hidden' : 'md:hidden'} xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" onClick={handleShow}>
           <rect width="24" height="24" fill="none" />
-          <path fill="none" stroke={(basePath === 'home' || location.pathname == '/' || location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? '#FFFFFF' : '#0A2640'} stroke-linecap="round" stroke-width="1.5" d="M20 7H4m16 5H4m16 5H4" />
+          <path fill="none" stroke={(basePath === '' || basePath === '/' || location.pathname == '/' || location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? '#FFFFFF' : '#0A2640'} stroke-linecap="round" stroke-width="1.5" d="M20 7H4m16 5H4m16 5H4" />
         </svg>
       </div>
 
@@ -147,6 +147,11 @@ const Navbar = () => {
           <a href={referralCode ? `/contact/${referralCode}` : '/contact'}>
             <li className="text-primary font-medium text-[16px] mb-[20px]">
               Contact us
+            </li>
+          </a>
+          <a href={referralCode ? `https://app.craddule.com/login?referralCode=${referralCode}` : 'https://app.craddule.com/login'}>
+            <li className="text-primary font-medium text-[16px] mb-[20px]">
+              Login
             </li>
           </a>
           <a href={referralCode ? `/pricing/${referralCode}` : '/pricing'} className=''>
