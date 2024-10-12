@@ -43,7 +43,7 @@ const Navbar = () => {
   return (
     <>
 
-      <div className={(hasLettersAndNumbers || basePath==='home'  || location.pathname == '/waiting') && height < 70 ? 'flex justify-between items-center px-[30px] md:px-[139px] py-[5px] pt-[20px] md:py-[0px] md:pt-[35px] bg-none z-[999] relative top-0' : 'flex justify-between items-center px-[30px] md:px-[139px] py-[15px] md:py-[15px] bg-[#F9F9F9] z-[1000] sticky top-0'}>
+      <div className={(hasLettersAndNumbers || basePath === '' || basePath === '/' || basePath==='home'  || location.pathname == '/waiting') && height < 70 ? 'flex justify-between items-center px-[30px] md:px-[139px] py-[5px] pt-[20px] md:py-[0px] md:pt-[35px] bg-none z-[999] relative top-0' : 'flex justify-between items-center px-[30px] md:px-[139px] py-[15px] md:py-[15px] bg-[#F9F9F9] z-[1000] sticky top-0'}>
         <div className='w-fit'>
           <a href={referralCode ? `/${referralCode}` : '/'}
             className={(hasLettersAndNumbers ||  location.pathname == '/' || location.pathname == '/waiting' || location.pathname == '/waiting') && height < 70 ? 'text-[30px] md:text-[44px] font-manrope font-semibold text-white' : 'text-[30px] md:text-[44px] font-manrope font-semibold text-primary flex gap-2'}>
