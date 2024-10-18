@@ -27,6 +27,8 @@ const Countdown = () => {
     const navigate = useNavigate();
     const { referralCode } = useParams()
 
+    
+
     useEffect(() => {
         if (referralCode) {
             localStorage.setItem('referralCode', referralCode);
