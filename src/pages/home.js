@@ -140,7 +140,7 @@ const Home = () => {
                             <h1 className='text-white'>Your Launchpad to Success!</h1>
                             <p className='text-white'>We believe in the power of innovation <br /> and the potential of every startup to make a significant <br />impact.</p>
                             <div className='flex gap-4 mt-5 md:mt-10'>
-                                <a href={`https://app.craddule.com/signUp/${code ? code : ''}`}
+                                <a href={`https://app.craddule.com/signup/${code ? code : ''}`}
                                     className='btn btn-dark-outline bg-lightBlue border-lightBlue text-primary'>Get Started</a>
                                 {/* <button className='btn btn-outline-light'>Explore</button> */}
                             </div>
@@ -223,7 +223,7 @@ const Home = () => {
                                 <p className='text-[14px] md:text-[16px]'>We provide the vital tools and support needed to transform concepts into impactful solutions.</p>
                             </div>
                         </div>
-                        <a href={`https://app.craddule.com/signUp/${code ? code : ''}`} className='block btn btn-dark mt-5 md:mt-10'>Get Started</a>
+                        <a href={`https://app.craddule.com/signup/${code ? code : ''}`} className='block btn btn-dark mt-5 md:mt-10'>Get Started</a>
                     </div>
                 </div>
             </div>
