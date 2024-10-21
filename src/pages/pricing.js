@@ -236,7 +236,7 @@ const Pricing = () => {
                                     </div>
                                 </div>
                                 <div className='flex justify-center mt-5'>
-                                        <button className='btn btn-light' onClick={() => window.location.href= `https://app.craddule.com/signUp/${referralCode ? referralCode : ''}`}>Start Trial</button>
+                                        <button className='btn btn-light' onClick={() => window.location.href= `https://app.craddule.com/signup/${referralCode ? referralCode : ''}`}>Start Trial</button>
                                    
                                 </div>
                             </div>
