@@ -11,8 +11,10 @@ import Pricing from './pages/pricing.js';
 import Index from './pages/index.js';
 import Countdown from './pages/countdown.js';
 import N404 from './pages/404.js';
+import { clarity } from 'react-microsoft-clarity';
 
 function App() {
+  clarity.init('ookmohtxc5');
   return (
     <div>
       <BrowserRouter>
