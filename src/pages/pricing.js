@@ -328,7 +328,7 @@ const Pricing = () => {
                                         <p className='text-[12px] md:text-[16px]'>per user</p>
                                         <p className='-mt-1 text-[12px] md:text-[16px]'>per month</p>
                                     </div> */}
-                                        <h4>Coming soon!</h4>
+                                        <h4 href='demo.craddule.com' >Get Started!</h4>
                                     </div>
                                     <div className='flex justify-center'>
                                         <div className='mt-8 w-fit'>
