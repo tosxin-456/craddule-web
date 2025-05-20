@@ -1,16 +1,12 @@
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
-import BuildCTA from './components/buildCTA.js';
-import Footer from './components/footer.js';
-import Navbar from './components/navbar.js'
-import Subscribe from './components/subscribe.js';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/home.js';
 import About from './pages/about.js';
 import Contact from './pages/contact.js';
 import Features from './pages/features.js';
 import Pricing from './pages/pricing.js';
-import Index from './pages/index.js';
 import Countdown from './pages/countdown.js';
 import N404 from './pages/404.js';
+import PrivacyPolicy from './pages/privacy.js';
 import { clarity } from 'react-microsoft-clarity';
 
 function App() {
@@ -19,13 +15,27 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path='/:referralCode?' Component={Home} />
-          <Route path='/waiting/:referralCode?' Component={Countdown} />
-          <Route path='/about/:referralCode?' Component={About} />
-          <Route path='/contact/:referralCode?' Component={Contact} />
-          <Route path='/features/:referralCode?' Component={Features} />
-          <Route path='/pricing/:referralCode?' Component={Pricing} />
-          <Route path='/404/:referralCode?' Component={N404} />
+          {/* Fixed route structure - exact paths first, then parameterized routes */}
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/waiting" element={<Countdown />} />
+          <Route path="/404" element={<N404 />} />
+
+          {/* Routes with optional referral codes */}
+          <Route path="/about/:referralCode" element={<About />} />
+          <Route path="/contact/:referralCode" element={<Contact />} />
+          <Route path="/features/:referralCode" element={<Features />} />
+          <Route path="/pricing/:referralCode" element={<Pricing />} />
+          <Route path="/waiting/:referralCode" element={<Countdown />} />
+          <Route path="/privacy/:referralCode" element={<PrivacyPolicy />} />
+          <Route path="/404/:referralCode" element={<N404 />} />
+
+          {/* Home routes - root path with optional referral code */}
+          <Route path="/:referralCode" element={<Home />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import Logo1 from '../assets/images/Craddule logo 1.png';
 import Logo2White from '../assets/images/Craddule logo 2 white.png';
-
+// 
 const Nav = () => {
 
   const location = useLocation();
@@ -47,7 +47,7 @@ const Nav = () => {
         <div className='w-fit'>
           <a href={referralCode ? `/home/${referralCode}` : '/home'}
             className={(hasLettersAndNumbers || basePath === 'home'|| location.pathname == '/' || location.pathname == '/home' || location.pathname == '/waiting' || location.pathname == '/waiting') && height < 70 ? 'text-[30px] md:text-[44px] font-manrope font-semibold text-white' : 'text-[30px] md:text-[44px] font-manrope font-semibold text-primary flex gap-2 items-center'}>
-            <img src={(hasLettersAndNumbers || basePath === 'home' || location.pathname == '/' || location.pathname == '/home' || location.pathname == '/waiting') && height < 70 ? Logo2White : Logo1} className={(basePath === 'home' || location.pathname == '/' || location.pathname == '/home' || location.pathname == '/waiting') && height < 70 ? 'w-[100px] md:w-[150px]' : 'w-[50px] md:w-[70px]'} />
+            <img src={Logo2White} className={(basePath === 'home' || location.pathname == '/' || location.pathname == '/home' || location.pathname == '/waiting') && height < 70 ? 'w-[100px] md:w-[150px]' : 'w-[50px] md:w-[70px]'} />
             <p className={(hasLettersAndNumbers || basePath === 'home' || location.pathname == '/' || location.pathname == '/home' || location.pathname == '/waiting') && height < 70 ? 'hidden' : 'block font-black'}>Craddule</p>
           </a>
         </div>

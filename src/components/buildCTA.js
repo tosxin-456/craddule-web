@@ -15,7 +15,7 @@ const BuildCTA = () => {
     }, []);
      
     return(
-        <div className='bg-primary px-[30px] md:px-[139px] h-[150px] md:h-[243px] w-full'>
+        <div className='bg-[#0B1D50] mb-32 px-[30px] md:px-[139px] h-[150px] md:h-[243px] w-full'>
             <div className='relative'>
                 <div className='buildCTA md:absolute w-full left-0'>
                 </div>
@@ -23,7 +23,7 @@ const BuildCTA = () => {
             <div className="relative -top-32 md:-top-0 text-center">
                 <div className='justify-between w-full md:flex items-center h-[243px]'>
                     <p className='my-3 md:my-0 text-[25px] md:text-[58px] text-white md:float-left'>To build a lasting brand </p>
-                    <a href={referralCode ? `/pricing/${referralCode}` : '/pricing'} className='btn btn-outline-light text-[12px] md:text-[20px] md:loat-right'>
+                    <a href={referralCode ? `/pricing/${referralCode}` : '/pricing'} className=' border-white text-white border-[3px] rounded-full px-7 py-3 text-[12px] md:text-[20px] md:loat-right'>
                         <span>Start now</span>
                     </a>
                 </div>

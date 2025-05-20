@@ -11,9 +11,24 @@
     @apply font-manrope;
 }
 
-body{
-    background: #F9F9F9;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  overflow-y: auto;   /* Allows vertical scrolling when needed */
 }
+
+/* body {
+  background-color: rgb(0, 0, 0);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
+
+
+
 
 h1{
     /* font-size: 58px; */
@@ -57,10 +72,6 @@ h4{
 }
 .nav-item:hover{
     @apply transition ease-in 
-    /* underline */
-    /* underline-offset-8 */
-    /* decoration-primary */
-    /* decoration-2 */
     -translate-y-1
     duration-700
 }
@@ -81,7 +92,6 @@ input::placeholder{
     py-2 md:py-3
     w-fit
     rounded-[20px] md:rounded-[24px]
-    border
     font-semibold
     text-[14px] md:text-[16px]
 }
@@ -133,19 +143,18 @@ input::placeholder{
 }
 
 .buildCTA{
-    background: url("./assets/images/world_map_png.png");
+    background: url("./assets/images/world.svg");
     background-size:cover;
     opacity: .2;
     @apply bg-primary
     h-[150px] md:h-[243px]
-    /* overflow-hidden */
 }
 
 .mainCTA{
-    background: url("./assets/images/mainback.png");
+    background: url("./assets/bg-image//Component\ 128.png");
     background-size:cover;
-    height: 880px;
-    @apply h-screen md:h-screen
+    /* height: 880px; */
+    @apply h-[90vh] md:h-[110vh]
 }
 
 .main2CTA{
@@ -186,7 +195,7 @@ input::placeholder{
     background-size:cover;
     height: 880px;
     @apply h-[550px] md:h-[880px]
-}
+} 
 
 .canCTA{
     background: url("./assets/images/Canada\ map.png");
@@ -209,12 +218,13 @@ input::placeholder{
     @apply h-[550px] md:h-[880px]
 }
 
-.contact-img
+
+/* .contact-img
     {
         /* background: url("./assets/images/contact.png");
         background-size:auto; */
         /* background-blend-mode:multiply; */
-        /* height: 243px; */
+        /* height: 243px;
     }
 
 .card{
@@ -245,4 +255,97 @@ input::placeholder{
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 5000;
-  }
+  } */
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-slideDown {
+  animation: slideDown 1s ease forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 1s ease forwards;
+}
+
+.animate-slideLeft {
+  animation: slideLeft 1s ease forwards;
+}
+
+.animate-slideRight {
+  animation: slideRight 1s ease forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.8s ease forwards;
+}
+
+.animate-fadeInUp {
+  animation: slideUp 0.8s ease forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.2; }
+}
+
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animate-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animate-delay-600 {
+  animation-delay: 600ms;
+}
+
+.opacity-0 {
+  opacity: 0;
+}

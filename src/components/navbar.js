@@ -1,7 +1,7 @@
 import '../input.css'
 import { useEffect, useState } from 'react';
 import React, { useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+import { matchPath, useLocation } from 'react-router-dom';
 import Logo1 from '../assets/images/Craddule logo 1.png';
 import Logo2White from '../assets/images/Craddule logo 2 white.png';
 
@@ -14,6 +14,12 @@ const Navbar = () => {
   const hasLettersAndNumbers = /^(?=.*[a-zA-Z])(?=.*[0-9]).+$/.test(basePath);
   const [referralCode, setReferralCode] = useState('');
 
+
+  const pathSegments = location.pathname.split('/').filter(Boolean); // e.g. ['tyttyt'] or ['about', 'ref123']
+
+  const knownPages = ['about', 'contact', 'features', 'pricing', 'waiting', '404', 'privacy'];
+
+  const isHomePage = pathSegments.length <= 1 && !knownPages.includes(pathSegments[0]);
   useEffect(() => {
     // Fetch referralCode from localStorage
     const storedReferralCode = localStorage.getItem('referralCode');
@@ -21,7 +27,7 @@ const Navbar = () => {
       setReferralCode(storedReferralCode);
     }
   }, []);
-  console.log(basePath)
+  // console.log(basePath)
   const handleShow = () => {
     setShow(!show);
   };
@@ -43,16 +49,27 @@ const Navbar = () => {
   return (
     <>
 
-      <div className={(hasLettersAndNumbers || basePath === '' || basePath === '/' || basePath==='home'  || location.pathname == '/waiting') && height < 70 ? 'flex justify-between items-center px-[30px] md:px-[139px] py-[5px] pt-[20px] md:py-[0px] md:pt-[35px] bg-none z-[999] relative top-0' : 'flex justify-between items-center px-[30px] md:px-[139px] py-[15px] md:py-[15px] bg-[#F9F9F9] z-[1000] sticky top-0'}>
+      <div className={'flex w-full justify-between items-center px-[30px] md:px-[139px] py-[5px] pt-[20px] md:py-[0px] md:pt-[35px] bg-none z-[999] relative top-0'}>
         <div className='w-fit'>
           <a href={referralCode ? `/${referralCode}` : '/'}
-            className={(hasLettersAndNumbers ||  location.pathname == '/' || location.pathname == '/waiting' || location.pathname == '/waiting') && height < 70 ? 'text-[30px] md:text-[44px] font-manrope font-semibold text-white' : 'text-[30px] md:text-[44px] font-manrope font-semibold text-primary flex gap-2'}>
-            <img src={(hasLettersAndNumbers || location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? Logo2White : Logo1} className={(hasLettersAndNumbers ||   location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? 'w-[100px] md:w-[150px]' : 'w-[50px] md:w-[70px]'} />
-            <p className={(hasLettersAndNumbers ||   location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? 'hidden' : 'block font-black'}>Craddule</p>
+            className="flex items-center gap-2 md:gap-3 text-[30px] md:text-[44px] font-manrope font-semibold text-white">
+
+            <img
+              src={isHomePage ? Logo2White : Logo1}
+              className={`w-[60px] md:w-[70px] ${isHomePage ? 'w-[80px] md:w-[90px]' : ''}`}
+              alt="Craddule Logo"
+            />
+
+            {!isHomePage && (
+              <span className="font-manrope font-bold text-lg md:text-xl text-black">
+                Craddule
+              </span>
+            )}
           </a>
+
         </div>
         <div className='text-[16px] font-semibold w-auto'>
-          <ul className={(hasLettersAndNumbers || location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? 'hidden md:flex justify-between items-center text-white gap-7' : 'hidden md:flex sm:hidden justify-between items-center text-deepBlue gap-7'}>
+          <ul className={`hidden md:flex justify-between items-center gap-7 ${isHomePage ? 'text-white' : 'text-black'}`}>
             <a href={referralCode ? `/${referralCode}` : '/'}>
               <li className='nav-item'>
                 Home
@@ -78,24 +95,26 @@ const Navbar = () => {
                 Contact Us
               </li>
             </a>
-            
+
             <a href={referralCode ? `https://app.craddule.com/login?referralCode=${referralCode}` : 'https://app.craddule.com/login'}>
               <li className='nav-item'>
                 Login
               </li>
             </a>
             <a href={referralCode ? `/pricing/${referralCode}` : '/pricing'}>
-              <li className='nav-item btn btn-light'>
+              <li className={`nav-item btn ${!isHomePage ? 'bg-primary text-white rounded-full' : 'btn-light'}`}>
                 Join
               </li>
             </a>
+
           </ul>
         </div>
         <svg className={show ? 'hidden' : 'md:hidden'} xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" onClick={handleShow}>
           <rect width="24" height="24" fill="none" />
-          <path fill="none" stroke={(hasLettersAndNumbers || basePath === '' || basePath === '/' || location.pathname == '/' || location.pathname == '/' || location.pathname == '/waiting') && height < 70 ? '#FFFFFF' : '#0A2640'} stroke-linecap="round" stroke-width="1.5" d="M20 7H4m16 5H4m16 5H4" />
+          <path fill="none" stroke={isHomePage ? '#FFFFFF' : '#000000'} strokeLinecap="round" strokeWidth="1.5" d="M20 7H4m16 5H4m16 5H4" />
         </svg>
       </div>
+
 
       <div
         className={
@@ -149,12 +168,12 @@ const Navbar = () => {
             </li>
           </a>
           <a href={referralCode ? `https://app.craddule.com/login` : 'https://app.craddule.com/login'}>
-            <li className="text-primary font-medium text-[16px] mb-[20px]">
+            <li className="text-white bg-primary py-1 px-5 rounded-full w-fit text-center border-primary border-[1px] font-medium text-[16px] mb-[20px]">
               Login
             </li>
           </a>
           <a href={referralCode ? `/pricing/${referralCode}` : '/pricing'} className=''>
-            <li className='nav-item btn btn-light mt-10 w-[fit-content]'>
+            <li className='nav-item btn text-primary p-1 rounded-full w-[70%] text-center border-primary border-[1px] font btn-light mt-10'>
               Join
             </li>
           </a>
