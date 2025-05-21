@@ -387,7 +387,7 @@ const Home = () => {
                         </p>
                         <div className="flex gap-4 mt-5 md:mt-10">
                             <motion.a
-                                href={`https://app.craddule.com/signup/${code ? code : ''}`}
+                                href={`https://app.craddule.com/signup${code ? `/${code}` : ''}`}
                                 className="btn btn-dark-outline bg-[#193FAE] text-white"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
@@ -727,7 +727,11 @@ const Home = () => {
                                 <p className='text-[14px] md:text-[16px]'>We provide the vital tools and support needed to transform concepts into impactful solutions.</p>
                             </div>
                         </div>
-                        <a href={`https://app.craddule.com/signup/${code ? code : ''}`} className='block btn btn-dark mt-5 md:mt-10'>Get Started</a>
+                        <a
+                            href={`https://app.craddule.com/signup${code ? `/${code}` : ''}`}
+
+
+                            className='block btn btn-dark mt-5 md:mt-10'>Get Started</a>
                     </div>
                     <div className=' hidden md:block col-span-12 md:col-span-6'>
                         <div className=''>

@@ -135,7 +135,7 @@ const Pricing = () => {
             title: "Subscription Plan",
             description: `Get unlimited access at just ${currency}${monthlyPrice} per month.`,
             buttonText: "Start Monthly Plan",
-            onClick: () => window.location.href = `https://app.craddule.com/signup/${referralCode ? referralCode : ''}?plan=monthly`
+            onClick: () => window.location.href = `https://app.craddule.com/signup${referralCode ? `/${referralCode}` : ''}?plan=monthly`
         },
         {
             id: 3,
@@ -143,7 +143,7 @@ const Pricing = () => {
             title: "One-Time Payment",
             description: `Pay ${currency}${lifetimePrice} once and get full access for a single project—no recurring fees.`,
             buttonText: "Get Lifetime Access",
-            onClick: () => window.location.href = `https://app.craddule.com/signup/${referralCode ? referralCode : ''}?plan=lifetime`
+            onClick: () => window.location.href = `https://app.craddule.com/signup${referralCode ? `/${referralCode}` : ''}?plan=monthly`
         }
     ];
 
@@ -226,7 +226,7 @@ const Pricing = () => {
                                         <div className="w-full flex justify-center">
                                             <button
                                                 className='border-white border-solid border-[2px] bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-full font-bold transition-all duration-300 hover:shadow-lg hover:translate-y-1'
-                                                onClick={() => window.location.href = `https://app.craddule.com/signup/${referralCode ? referralCode : ''}`}
+                                                onClick={() => window.location.href = `https://app.craddule.com/signup${referralCode ? `/${referralCode}` : ''}`}
                                             >
                                                 Start your Project
                                             </button>
