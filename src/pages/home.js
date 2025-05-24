@@ -24,6 +24,7 @@ import bg_video from '../assets/videos/coffee.mp4'
 import WOW from "wowjs";
 import "animate.css";
 import PageSlider from '../components/slider';
+import WaitingForAbby from '../components/WaitingForAbby';
 
 const Home = () => {
     ReactGA.initialize("G-125ZTWLY25");
@@ -171,6 +172,7 @@ const Home = () => {
     ];
 
     const [currentImage, setCurrentImage] = useState(0);
+    const [showModal, setShowModal] = useState(false);
     const [data, setData] = useState();
     const [loading, setLoading] = useState(true);
     const [popupVisible, setPopupVisible] = useState(false);
@@ -314,6 +316,11 @@ const Home = () => {
         }
     };
 
+    const handleGetStartedClick = () => {
+        // e.preventDefault();
+        setShowModal(true);
+    };
+
     return (
         <>
             {popupVisible && (
@@ -385,17 +392,20 @@ const Home = () => {
                             Innovation is at the core of every new idea or business.  Take advantage of our advanced AI tools to build your dreams.
                             We believe in your ability to change the world!
                         </p>
-                        <div className="flex gap-4 mt-5 md:mt-10">
+                        <div className="flex hover:cursor-pointer gap-4 mt-5 md:mt-10">
                             <motion.a
-                                href={`https://app.craddule.com/signup${code ? `/${code}` : ''}`}
+                                // href={`https://app.craddule.com/signup${code ? `/${code}` : ''}`}
                                 className="btn btn-dark-outline bg-[#193FAE] text-white"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
+                                onClick={() => handleGetStartedClick()}
+
                             >
                                 Get Started
                             </motion.a>
                         </div>
                     </motion.div>
+
                     <motion.div
                         className="col-span-12 pt-[50px] flex flex-col items-center md:col-span-6 md:pt-[70px]"
                         initial="hidden"
@@ -421,6 +431,7 @@ const Home = () => {
                     </motion.div>
                 </div>
             </div>
+            {showModal && <WaitingForAbby onClose={() => setShowModal(false)} />}
 
             {/* Transition Section */}
             <div className="relative w-full py-16 md:py-24 bg-white" ref={aboutRef}>
@@ -483,7 +494,6 @@ const Home = () => {
                                     <p className="text-gray-600">Harness the power of AI to expand your creative horizons.</p>
                                 </div>
                             </motion.div>
-
                             {/* Card 2 */}
                             <motion.div
                                 className="bg-gradient-to-b from-white to-blue-50 rounded-xl shadow-md p-6 transition-all hover:shadow-lg"
@@ -728,10 +738,8 @@ const Home = () => {
                             </div>
                         </div>
                         <a
-                            href={`https://app.craddule.com/signup${code ? `/${code}` : ''}`}
-
-
-                            className='block btn btn-dark mt-5 md:mt-10'>Get Started</a>
+                           onClick={handleGetStartedClick}
+                            className='block cursor-pointer btn btn-dark mt-5 md:mt-10'>Get Started</a>
                     </div>
                     <div className=' hidden md:block col-span-12 md:col-span-6'>
                         <div className=''>

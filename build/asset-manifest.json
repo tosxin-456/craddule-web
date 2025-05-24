@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.35d6668c.css",
-    "main.js": "/static/js/main.2e32d731.js",
+    "main.css": "/static/css/main.a8e66f55.css",
+    "main.js": "/static/js/main.5c87940a.js",
     "static/media/coffee.mp4": "/static/media/coffee.0bde07dfdb3266c4afd0.mp4",
     "static/media/contact.svg": "/static/media/contact.3b494320a1bd202327fa145d13e8d2ac.svg",
     "static/media/pic 1.jpg": "/static/media/pic 1.64567e62d0105514564e.jpg",
@@ -20,7 +20,7 @@
     "static/media/explore.png": "/static/media/explore.5ecca835932fe15fb7fb.png",
     "static/media/connect2.png": "/static/media/connect2.5cbc74961e5c8c68ccc5.png",
     "static/media/Craddule logo 1.png": "/static/media/Craddule logo 1.5b77dd6d54bae4982d47.png",
-    "static/media/signUp.jpeg": "/static/media/signUp.5a207a17c5245d5c4edb.jpeg",
+    "static/media/signup.jpeg": "/static/media/signup.5a207a17c5245d5c4edb.jpeg",
     "static/media/homepage.jpeg": "/static/media/homepage.8da2d7934d37194840be.jpeg",
     "static/media/projectspage.jpeg": "/static/media/projectspage.6dbba6905b2af83d59e2.jpeg",
     "static/media/questions.jpeg": "/static/media/questions.4699a1b0c3410eaabbf0.jpeg",
@@ -31,7 +31,6 @@
     "static/media/excellence.jpeg": "/static/media/excellence.18c26024fc93526eb7b8.jpeg",
     "static/media/login.jpeg": "/static/media/login.eefd880db28a4ecc83e0.jpeg",
     "static/media/check.jpeg": "/static/media/check.e6952ec5ed0f9d68f52a.jpeg",
-    "static/media/phasesummary.jpeg": "/static/media/phasesummary.c8096183ccbf9152e5f0.jpeg",
     "static/media/innovation.jpeg": "/static/media/innovation.036396448a4e66ebbc70.jpeg",
     "static/media/mainback4.svg": "/static/media/mainback4.406ac93c989f54226b2cc72ce72bcc9e.svg",
     "static/media/mainback3.svg": "/static/media/mainback3.0244b8a7f8b4e73a524095f5ba78aac8.svg",
@@ -51,11 +50,11 @@
     "static/media/chat.svg": "/static/media/chat.960a7da6bafdbf61acc9ed547a85b150.svg",
     "static/media/smart.svg": "/static/media/smart.6ccb9feaef6a946ea1305f46b6388d6c.svg",
     "static/media/world.svg": "/static/media/world.ad11fd7eb00d707566a6.svg",
-    "main.35d6668c.css.map": "/static/css/main.35d6668c.css.map",
-    "main.2e32d731.js.map": "/static/js/main.2e32d731.js.map"
+    "main.a8e66f55.css.map": "/static/css/main.a8e66f55.css.map",
+    "main.5c87940a.js.map": "/static/js/main.5c87940a.js.map"
   },
   "entrypoints": [
-    "static/css/main.35d6668c.css",
-    "static/js/main.2e32d731.js"
+    "static/css/main.a8e66f55.css",
+    "static/js/main.5c87940a.js"
   ]
 }

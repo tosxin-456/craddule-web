@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
 // Import images
-import signup from '../assets/scroll_images/signUp.jpeg';
+import signup from '../assets/scroll_images/signup.jpeg';
 import login from '../assets/scroll_images/login.jpeg';
 import projects_page from '../assets/scroll_images/projectspage.jpeg';
 import home_page from '../assets/scroll_images/homepage.jpeg';
-import phase from '../assets/scroll_images/phasesummary.jpeg';
+import phase from '../assets/scroll_images/signup.jpeg';
 import questions from '../assets/scroll_images/questions.jpeg';
 
 const PageSlider = () => {
