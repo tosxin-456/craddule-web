@@ -23,7 +23,7 @@ export default function WaitingForAbby({ onClose }) {
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 text-white px-4 overflow-hidden" style={{ zIndex: 9999 }}>
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 opacity-90"></div>
+            <div className="absolute inset-0 opacity-90"></div>
 
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 max-w-md w-full text-center shadow-2xl border border-white border-opacity-20 relative" style={{ zIndex: 10000 }}>
                 {/* Close button */}

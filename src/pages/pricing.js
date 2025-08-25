@@ -10,6 +10,7 @@ import WOW from "wowjs";
 import "animate.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { Repeat, Wallet, ChevronLeft, MapPin, Globe } from 'lucide-react';
+import PageUnavailable from '../components/goofyMessage';
 
 const Pricing = () => {
     // Google Analytics Initialization
@@ -167,12 +168,12 @@ const Pricing = () => {
             <div className='px-4 md:px-24 py-8 md:py-16 bg-gray-50'>
                 <div className='max-w-5xl mx-auto'>
                     {/* Page Title */}
-                    <h1 className='text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800 animate-fadeIn'>
+                    {/* <h1 className='text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800 animate-fadeIn'>
                         Simple & flexible plans built for everyone
                     </h1>
                     <p className='text-center text-gray-600 mb-12 max-w-2xl mx-auto animate-fadeIn animate-delay-200'>
                         Choose the plan that best fits your needs and start building your dream product today.
-                    </p>
+                    </p> */}
 
                     {/* Location Indicator */}
                     {/* <div className="flex items-center justify-center mb-8 text-gray-600">
@@ -187,9 +188,10 @@ const Pricing = () => {
                             </span>
                         </div>
                     </div> */}
+                    <PageUnavailable />
 
                     {/* Pricing Card */}
-                    <AnimatePresence mode="wait">
+                    {/* <AnimatePresence mode="wait">
                         {!showPaymentOptions && (
                             <motion.div
                                 key="pricing-card"
@@ -201,7 +203,6 @@ const Pricing = () => {
                             >
                                 <div className='bg-darkBlue rounded-2xl shadow-lg transform transition-all duration-500 hover:scale-[1.02] hover:shadow-xl animate-slideInRight w-full max-w-md'>
                                     <div className='p-8'>
-                                        {/* Feature List */}
                                         <div className='space-y-4 mb-8'>
                                             {[
                                                 "Dedicated Product Launch Support",
@@ -222,7 +223,6 @@ const Pricing = () => {
                                             ))}
                                         </div>
 
-                                        {/* Subscribe Button */}
                                         <div className="w-full flex justify-center">
                                             <button
                                                 className='border-white border-solid border-[2px] bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-full font-bold transition-all duration-300 hover:shadow-lg hover:translate-y-1'
@@ -236,10 +236,10 @@ const Pricing = () => {
                                 </div>
                             </motion.div>
                         )}
-                    </AnimatePresence>
+                    </AnimatePresence> */}
 
                     {/* Payment Options Container */}
-                    <div className="container mx-auto p-4 bg-white flex justify-center items-center">
+                    {/* <div className="container mx-auto p-4 bg-white flex justify-center items-center">
                         <AnimatePresence mode="wait">
                             {!showPaymentOptions ? (
                                 <motion.div
@@ -272,7 +272,6 @@ const Pricing = () => {
                                     transition={{ duration: 0.3 }}
                                     className="w-full"
                                 >
-                                    {/* Back Button */}
                                     <button
                                         onClick={() => setShowPaymentOptions(false)}
                                         className="flex items-center text-blue-600 hover:text-blue-800 mb-4"
@@ -311,10 +310,10 @@ const Pricing = () => {
                                 </motion.div>
                             )}
                         </AnimatePresence>
-                    </div>
+                    </div> */}
 
                     {/* Custom Plan Section */}
-                    <div className='mt-16 text-center animate-fadeIn animate-delay-500'>
+                    {/* <div className='mt-16 text-center animate-fadeIn animate-delay-500'>
                         <h3 className='text-xl font-semibold text-gray-800 mb-4'>
                             Need a custom plan for your team?
                         </h3>
@@ -327,7 +326,7 @@ const Pricing = () => {
                         >
                             Contact Sales
                         </button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <Footer />

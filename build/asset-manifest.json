@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.a8e66f55.css",
-    "main.js": "/static/js/main.5c87940a.js",
+    "main.css": "/static/css/main.f5a369ef.css",
+    "main.js": "/static/js/main.2c217955.js",
     "static/media/coffee.mp4": "/static/media/coffee.0bde07dfdb3266c4afd0.mp4",
     "static/media/contact.svg": "/static/media/contact.3b494320a1bd202327fa145d13e8d2ac.svg",
     "static/media/pic 1.jpg": "/static/media/pic 1.64567e62d0105514564e.jpg",
     "static/media/Component 128.png": "/static/media/Component 128.5b28baf8896c4295cecb.png",
+    "static/media/pitch-deck.png": "/static/media/pitch-deck.35d480eb4f5d7daa6ed3.png",
     "static/media/Canada map.png": "/static/media/Canada map.f7d8720ef81c7a754db1.png",
     "static/media/South africa map.png": "/static/media/South africa map.952678c02296631d55e2.png",
     "static/media/Nigerian map.png": "/static/media/Nigerian map.1e62d14fe53a0b320997.png",
     "static/media/Ghana map.png": "/static/media/Ghana map.604ad0d848d3a10f705d.png",
     "static/media/mainback.png": "/static/media/mainback.6a3dea7a40e17d55bfed.png",
     "static/media/change-one.png": "/static/media/change-one.893676c1d2e8643055a6.png",
+    "static/media/summary.png": "/static/media/summary.251e562bcdf5fc6d58a0.png",
     "static/media/change-three.png": "/static/media/change-three.f00055d59d6a21f926fb.png",
     "static/media/change-two.png": "/static/media/change-two.4b8fc0938677ade352d5.png",
     "static/media/pic 2.jpg": "/static/media/pic 2.dd4d8919c0911d203e67.jpg",
@@ -20,6 +22,7 @@
     "static/media/explore.png": "/static/media/explore.5ecca835932fe15fb7fb.png",
     "static/media/connect2.png": "/static/media/connect2.5cbc74961e5c8c68ccc5.png",
     "static/media/Craddule logo 1.png": "/static/media/Craddule logo 1.5b77dd6d54bae4982d47.png",
+    "static/media/currated_questions.png": "/static/media/currated_questions.46cb667748e7facd51c4.png",
     "static/media/signup.jpeg": "/static/media/signup.5a207a17c5245d5c4edb.jpeg",
     "static/media/homepage.jpeg": "/static/media/homepage.8da2d7934d37194840be.jpeg",
     "static/media/projectspage.jpeg": "/static/media/projectspage.6dbba6905b2af83d59e2.jpeg",
@@ -50,11 +53,11 @@
     "static/media/chat.svg": "/static/media/chat.960a7da6bafdbf61acc9ed547a85b150.svg",
     "static/media/smart.svg": "/static/media/smart.6ccb9feaef6a946ea1305f46b6388d6c.svg",
     "static/media/world.svg": "/static/media/world.ad11fd7eb00d707566a6.svg",
-    "main.a8e66f55.css.map": "/static/css/main.a8e66f55.css.map",
-    "main.5c87940a.js.map": "/static/js/main.5c87940a.js.map"
+    "main.f5a369ef.css.map": "/static/css/main.f5a369ef.css.map",
+    "main.2c217955.js.map": "/static/js/main.2c217955.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8e66f55.css",
-    "static/js/main.5c87940a.js"
+    "static/css/main.f5a369ef.css",
+    "static/js/main.2c217955.js"
   ]
 }

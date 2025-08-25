@@ -7,6 +7,10 @@ import projects_page from '../assets/scroll_images/projectspage.jpeg';
 import home_page from '../assets/scroll_images/homepage.jpeg';
 import phase from '../assets/scroll_images/signup.jpeg';
 import questions from '../assets/scroll_images/questions.jpeg';
+import pitch_deck from '../assets/scroll_images/pitch-deck.png';
+import summary from '../assets/scroll_images/summary.png';
+import currated_questions from '../assets/scroll_images/currated_questions.png';
+
 
 const PageSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -39,6 +43,21 @@ const PageSlider = () => {
             description: "Answer targeted questions that help refine your business model. Our expert-crafted prompts ensure you address all critical aspects of your startup."
         },
         {
+            image: currated_questions,
+            title: "Curated Questions",
+            description: "Access our carefully curated collection of business questions designed to guide your entrepreneurial journey. These strategic prompts help you think through every aspect of your business model and identify opportunities for growth."
+        },
+        {
+            image: pitch_deck,
+            title: "AI-Powered Pitch Deck",
+            description: "Transform your business insights into a professional pitch deck automatically. Our AI analyzes your responses and creates compelling presentations that effectively communicate your startup's value proposition to investors and stakeholders."
+        },
+        {
+            image: summary,
+            title: "Summary",
+            description: "Get a comprehensive overview of your project progress and key insights. Our summary feature consolidates all your work into digestible highlights, making it easy to track achievements and plan next steps."
+        },
+        {
             image: phase,
             title: "Phase Summary",
             description: "Your answers to key business questions are transformed into a structured phase summary using AI. This tailored roadmap ensures you move forward with a clear, well-defined strategy."
@@ -69,7 +88,7 @@ const PageSlider = () => {
     return (
         <section className="py-16 bg-gray-50">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-12 animate-fadeIn">
+                <div className="text-center mb-12">
                     <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">Platform Tour</span>
                     <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-6">Discover Craddule</h2>
                     <div className="w-20 h-1 bg-blue-600 mx-auto mb-6 rounded-full"></div>
@@ -127,16 +146,16 @@ const PageSlider = () => {
                     </div>
                 </div>
 
-                {/* Feature highlights */}
+                {/* Feature highlights - showing all slides */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-                    {[0, 2, 5].map((index) => (
+                    {slides.map((slide, index) => (
                         <div
                             key={index}
                             className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 cursor-pointer"
                             onClick={() => goToSlide(index)}
                         >
-                            <h4 className="font-semibold text-lg text-gray-900 mb-2">{slides[index].title}</h4>
-                            <p className="text-sm text-gray-600">{slides[index].description.substring(0, 100)}...</p>
+                            <h4 className="font-semibold text-lg text-gray-900 mb-2">{slide.title}</h4>
+                            <p className="text-sm text-gray-600">{slide.description.substring(0, 100)}...</p>
                         </div>
                     ))}
                 </div>
