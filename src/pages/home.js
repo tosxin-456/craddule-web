@@ -145,33 +145,33 @@ const Home = () => {
         other2,
         other3,
     ];
-
     const features = [
         {
             id: 1,
             image: Smart,
             title: "Smart Document Creation",
-            description: "Create professional-grade documents with ease, powered by Abby.",
+            description: "Instantly generate business plans, proposals, and reports tailored to your needs."
         },
         {
             id: 2,
             image: Financial,
-            title: "Powerful Financial Insights",
-            description: "Track financial performance and forecast revenue.",
+            title: "Financial Insights",
+            description: "Turn raw numbers into easy-to-read forecasts and performance reports."
         },
         {
             id: 3,
             image: Pitch,
             title: "Investor-Ready Pitch Decks",
-            description: "Craft compelling pitch decks with expert guidance.",
+            description: "Build decks that communicate your value clearly to investors."
         },
         {
             id: 4,
             image: Seamless,
-            title: "Seamless Collaboration",
-            description: "Assign tasks and track progress in real-time.",
-        },
+            title: "Team Collaboration",
+            description: "Work with your team in real time—assign tasks and track progress."
+        }
     ];
+
 
     const [currentImage, setCurrentImage] = useState(0);
     const [showModal, setShowModal] = useState(false);
@@ -389,10 +389,13 @@ const Home = () => {
                         animate="visible"
                         variants={heroTextVariants}
                     >
-                        <h1 className="text-white">Build your dreams, change the world!</h1>
+                        <h1 className="text-white">
+                            Generate the right business documents in minutes
+                        </h1>
                         <p className="text-[#FFFFFF]">
-                            Innovation is at the core of every new idea or business.  Take advantage of our advanced AI tools to build your dreams.
-                            We believe in your ability to change the world!
+                            Craddule helps you define, create, and customize the documents your business
+                            needs—whether you’re starting out, fundraising, or scaling. Powered by AI,
+                            tailored to your stage.
                         </p>
                         <div className="flex hover:cursor-pointer gap-4 mt-5 md:mt-10">
                             <motion.a
@@ -428,8 +431,10 @@ const Home = () => {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.7 }}
                         >
-                            "Your imagination is the window into a new world, let Craddule help you build it."
+                            "From pitch decks to financial models—get business-ready documents
+                            without the guesswork."
                         </motion.p>
+
                     </motion.div>
                 </div>
             </div>

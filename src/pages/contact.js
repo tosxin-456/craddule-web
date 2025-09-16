@@ -139,7 +139,7 @@ const Contact = () => {
                                         </div>
                                         <div>
                                             <h3 className="text-lg font-medium text-white">Phone</h3>
-                                            <p className="text-gray-300 mt-1">+1 (555) 123-4567</p>
+                                            {/* <p className="text-gray-300 mt-1">+1 (555) 123-4567</p> */}
                                         </div>
                                     </div>
                                     <div className={`flex items-center ${pulse}`} style={{ transitionDelay: '0.3s' }}>
@@ -162,7 +162,7 @@ const Contact = () => {
                                         </div>
                                         <div>
                                             <h3 className="text-lg font-medium text-white">Location</h3>
-                                            <p className="text-gray-300 mt-1">123 Innovation Way, Tech Valley</p>
+                                            {/* <p className="text-gray-300 mt-1">123 Innovation Way, Tech Valley</p> */}
                                         </div>
                                     </div>
                                 </div>

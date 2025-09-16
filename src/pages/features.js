@@ -38,12 +38,12 @@ const Features = () => {
 
   // Feature data with animation directions
   const features = [
-    {
-      img: Accelera,
-      title: "Accelera8",
-      desc: "Save time and launch your product just in time to infiltrate the market with no compromises on our service or your product quality.",
-      // animation: "translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100" // Slide up
-    },
+    // {
+    //   img: Accelera,
+    //   title: "Accelera8",
+    //   desc: "Save time and launch your product just in time to infiltrate the market with no compromises on our service or your product quality.",
+    //   // animation: "translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100" // Slide up
+    // },
     {
       img: Hub,
       title: "Craddule Hub",
@@ -68,12 +68,12 @@ const Features = () => {
       desc: "Tracking your progress has never been made easier, see your performance indicators displayed as graphs for easy understanding.",
       // animation: "scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100" // Scale up
     },
-    {
-      img: Graphs,
-      title: "Graphs",
-      desc: "Set, monitor, and manage your budgets effectively for different project stages. Stay within your financial boundaries while maximizing the impact of your resources.",
-      // animation: "scale-110 opacity-0 group-hover:scale-100 group-hover:opacity-100" // Scale down
-    }
+    // {
+    //   img: Graphs,
+    //   title: "Graphs",
+    //   desc: "Set, monitor, and manage your budgets effectively for different project stages. Stay within your financial boundaries while maximizing the impact of your resources.",
+    //   // animation: "scale-110 opacity-0 group-hover:scale-100 group-hover:opacity-100" // Scale down
+    // }
   ];
 
   return (
@@ -97,7 +97,7 @@ const Features = () => {
       {/* Features Grid Section */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
