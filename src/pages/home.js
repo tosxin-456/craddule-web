@@ -27,6 +27,7 @@ import PageSlider from '../components/slider';
 import WaitingForAbby from '../components/WaitingForAbby';
 import AbbyBusinessJourney from '../components/abbe-business';
 import AbbyLandingPage from '../components/abby-business';
+import PhasesOverview from '../components/Phases';
 
 const Home = () => {
     ReactGA.initialize("G-125ZTWLY25");
@@ -389,13 +390,10 @@ const Home = () => {
                         animate="visible"
                         variants={heroTextVariants}
                     >
-                        <h1 className="text-white">
-                            Generate the right business documents in minutes
-                        </h1>
+                        <h1 className="text-white">Build your dreams, change the world!</h1>
                         <p className="text-[#FFFFFF]">
-                            Craddule helps you define, create, and customize the documents your business
-                            needs—whether you’re starting out, fundraising, or scaling. Powered by AI,
-                            tailored to your stage.
+                            Innovation is at the core of every new idea or business.  Take advantage of our advanced AI tools to build your dreams.
+                            We believe in your ability to change the world!
                         </p>
                         <div className="flex hover:cursor-pointer gap-4 mt-5 md:mt-10">
                             <motion.a
@@ -442,7 +440,7 @@ const Home = () => {
 
             <AbbyLandingPage />
 
-
+            <PhasesOverview />
 
             <Footer />
 
