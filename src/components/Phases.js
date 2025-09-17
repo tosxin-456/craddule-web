@@ -25,8 +25,8 @@ const phases = [
         image:
             "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=250&fit=crop&auto=format",
         imageAlt: "Creative brainstorming session with people generating ideas",
-        questions: 10,
-        duration: " 8-10 minutes",
+        questions: 11,
+        duration: "8-12 minutes",
         bgColor: "bg-orange-100",
         darkBgColor: "bg-orange-900/30",
         value:
@@ -41,7 +41,7 @@ const phases = [
             "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=600&h=350&fit=crop&auto=format",
         imageAlt: "Design sketches and wireframes on paper",
         questions: 7,
-        duration: "7-10 minutes",
+        duration: "6-8 minutes",
         bgColor: "bg-indigo-100",
         darkBgColor: "bg-indigo-900/30",
         value: "Scalable design system and comprehensive product roadmap.",
@@ -54,8 +54,8 @@ const phases = [
         image:
             "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=350&fit=crop&auto=format",
         imageAlt: "Hands working on a prototype with tools and components",
-        questions: 5,
-        duration: "3-5 minutes",
+        questions: 6,
+        duration: "5-7 minutes",
         bgColor: "bg-teal-100",
         darkBgColor: "bg-teal-900/30",
         value: "Go-to-market strategy and user onboarding framework.",
@@ -68,8 +68,8 @@ const phases = [
         image:
             "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=350&fit=crop&auto=format",
         imageAlt: "Analytics dashboard showing testing results and user feedback",
-        questions: 5,
-        duration: "3-5 minutes",
+        questions: 7,
+        duration: "6-8 minutes",
         bgColor: "bg-purple-100",
         darkBgColor: "bg-purple-900/30",
         value: "Validated insights, risk analysis, and market-tested framework.",
@@ -82,8 +82,8 @@ const phases = [
         image:
             "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&h=350&fit=crop&auto=format",
         imageAlt: "Rocket launch representing product launch and market entry",
-        questions: 7,
-        duration: "8-10 minutes",
+        questions: 5,
+        duration: "4-6 minutes",
         bgColor: "bg-red-100",
         darkBgColor: "bg-red-900/30",
         value: "Pricing strategies, marketing campaigns, and investor-ready pitch deck.",
@@ -104,6 +104,7 @@ const phases = [
             "Investor-ready pitch deck, validated business model, and actionable roadmap.",
     },
 ];
+
 
 
 
